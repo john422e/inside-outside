@@ -4,7 +4,7 @@
 
 (
 o = Server.default.options;
-o.numOutputBusChannels = 4;
+o.numOutputBusChannels = 6; // four for the quartet (0, 1, 2, 3) and two for the house (4, 5)
 o.sampleRate_(48000);
 
 ServerOptions.devices;
