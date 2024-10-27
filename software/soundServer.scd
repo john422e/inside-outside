@@ -134,18 +134,21 @@ fork{ 1.0.wait;
 	}).play;
 */
 	s.sync;
+
+	~pianoLeftPlayers[[0,1].choose].set(\buf, ~pianoLeftBufs.choose, \startPos, 0, \t_trig, 1, \gate, 1);
+	~pianoRightPlayers[[0,1].choose].set(\buf, ~pianoRightBufs.choose, \startPos, 0, \t_trig, 1, \gate, 1);
 });
 
 s.meter;
 
 )
 
-~sinSynths[0].set(\gate, 0);
-~micLiveSynths[0].set(\inputGain, 1);
-~pianoLeftPlayers[[0,1].choose].set(\buf, ~pianoLeftBufs.choose, \startPos, 0, \t_trig, 1, \gate, 1);
-~pianoRightPlayers[[0,1].choose].set(\buf, ~pianoRightBufs.choose, \startPos, 0, \t_trig, 1, \gate, 1);
+//~sinSynths[0].set(\gate, 0);
+//~micLiveSynths[0].set(\inputGain, 1);
+//~pianoLeftPlayers[[0,1].choose].set(\buf, ~pianoLeftBufs.choose, \startPos, 0, \t_trig, 1, \gate, 1);
+//~pianoRightPlayers[[0,1].choose].set(\buf, ~pianoRightBufs.choose, \startPos, 0, \t_trig, 1, \gate, 1);
 
-x = Synth.new(\bufPlay_mono, ~pianoLeftBufs[0]);
-x.set(\buf, ~pianoLeftBufs.choose, \startPos, 0, \t_trig, 1, \gate, 1);
-x.set(\gate, 1);
-~pianoLeftBufs.choose;
+//x = Synth.new(\bufPlay_mono, ~pianoLeftBufs[0]);
+//x.set(\buf, ~pianoLeftBufs.choose, \startPos, 0, \t_trig, 1, \gate, 1);
+//x.set(\gate, 1);
+//~pianoLeftBufs.choose;
