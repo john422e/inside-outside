@@ -3,8 +3,8 @@
 (
 // global data, run this second
 
-~numInputs = 1; // analog inputs (quartet mics)
-~numOutputs = 2; // analog outputs (quartet speakers)
+~numInputs = 4; // analog inputs (quartet mics)
+~numOutputs = 4; // analog outputs (quartet speakers)
 ~numSines = 8; // how many sine waves to include in sinBank synth
 
 // use these with the ~filterList in functions.scd

@@ -12,12 +12,12 @@ ServerOptions.devices;
 //o.inDevice_("BlackHole 64ch");
 //o.outDevice_("BlackHole 64ch");
 
-o.inDevice_("MacBook Pro Microphone");
-o.outDevice_("MacBook Pro Speakers");
+//o.inDevice_("MacBook Pro Microphone");
+//o.outDevice_("MacBook Pro Speakers");
 
 // use this for performance with evo 16
-//o.inDevice_("Audient EVO16");
-//o.outDevice_("Audient EVO16");
+o.inDevice_("Audient EVO16");
+o.outDevice_("Audient EVO16");
 
 s.waitForBoot( { // boot server
 	// ADD SYNTHS TO SERVER
@@ -111,7 +111,7 @@ fork{ 1.0.wait;
 	// assign micSampler synths to micSamplerBuses
 	~micSamplerSynths = Array.fill(~numInputs, { arg i; Synth.new(\micSampler, [\in, i, \out, ~micSamplerBuses[i] ] ) } );
 	// micLive synths to analog outputs
-	~micLiveSynths = Array.fill(~numInputs, { arg i; Synth.new(\micLive, [\in, i, \out, i] ) } );
+	~micLiveSynths = Array.fill(~numInputs, { arg i; Synth.new(\micLive, [\in, i, \inputGain, 0.6, \out, i] ) } );
 	// sinBank synths to analog outputs
 	~sinSynths = Array.fill(~numInputs, { arg i; Synth.new(\sinBank_x, [\out, i] ) } );
 
