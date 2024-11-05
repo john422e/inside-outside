@@ -16,9 +16,18 @@
 		});
 		s.sync;
 	}).play;
-	s.sync;
 	bufs;
 };
+// ~init = Routine.new( {
+// 	~buffers = ~pianoNotesLeftDir.entries.collect( {
+// 		arg filename;
+// 		Buffer.read(s, filename.fullPath);
+// 	});
+// 	s.sync;
+//
+// }).play;
+
+
 
 ~updateStringMicSynth = {
 	arg mode, inst; // inst 0-3 (vln1, vln2, vla, cello)
