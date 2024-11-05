@@ -11,16 +11,16 @@ o.sampleRate_(48000);
 ServerOptions.devices;
 // use this for testing
 
-o.inDevice_("BlackHole 64ch");
+//o.inDevice_("BlackHole 64ch");
 //o.inDevice_("Soundflower (64ch)");
-o.outDevice_("BlackHole 64ch");
+//o.outDevice_("BlackHole 64ch");
 
 //o.inDevice_("MacBook Pro Microphone");
 //o.outDevice_("MacBook Pro Speakers");
 
 // use this for performance with evo 16
-// o.inDevice_("Audient EVO16");
-// o.outDevice_("Audient EVO16");
+o.inDevice_("Audient EVO16");
+o.outDevice_("Audient EVO16");
 
 // o.inDevice_("Ensemble");
 // o.outDevice_("Ensemble");
